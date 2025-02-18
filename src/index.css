@@ -1,0 +1,163 @@
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  --h1family:'Cormorant Garamond';
+  --green:#36db1c;
+
+}
+
+/* Custom Scrollbar for Body */
+
+body {
+  font-family:'poppins';
+  background: #fff;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+h1{
+  font-family: 'Cormorant Garamond';
+  font-weight:700;
+}
+
+.smalltext{
+  font-size: .8rem;
+  font-weight: 500;
+  line-height:200%;
+  color: grey;
+
+}
+
+.centered{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hmnumeff{
+  font-size: .8rem;
+  width: 36px;
+  height: 35px;
+  color: var(--green);
+  padding: 7px 10px;
+  border: 1px solid rgb(197, 196, 196);
+  border-radius: 50%;
+  font-weight: 500;
+}
+
+.greensection{
+  padding: 5%;
+}
+
+.card{
+  width: 307px;
+  height: 307px;
+  background-image: url(/images/card.webp);
+  background-size: cover;
+  background-position: revert;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  padding: 30px;
+}
+
+.form-label{
+  font-size: .8rem;
+  font-weight: 500;
+  margin-bottom: .2rem;
+}
+
+.form-control{
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border-color: grey;
+  border:1px solid #dedede;
+}
+
+.form-control::placeholder{
+  color: rgb(183, 183, 183);
+  font-size: .9rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.greenbutton{
+  background-color: var(--green);
+  padding: 8px 10px;
+  border-radius: 12px;
+  font-size: .85rem;
+  font-weight: 500;
+  border: 1px solid var(--green);
+}
+
+.greenbutton:hover,.greenbutton:focus{
+  background-color: black;
+  border-color: var(--green);
+  color: var(--green);
+}
+
+
+.footer{
+  padding: 7% 5%;
+  background: #9aff91;
+  position: relative;
+}
+
+.footerlist:hover{
+  transform: scale3d(1.1,1.1,1.1);
+  transition: .5s ease;
+}
+.footerlist{
+  display: flex;
+  align-items: center;
+  gap:10px;
+  margin-bottom: 20px;
+  transition: .5s ease;
+  span{
+  height: 25px;
+  display: block;
+  width: 2.4px;
+  background: green;
+  border-radius: 10px;
+
+  }
+  h6{
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    color: black;
+    
+  }
+}
+
+.smallimg{
+display: none;
+}
+.section2h2{
+  font-size: 80px;
+}
+@media screen and (max-width:550px){
+  .smallimg{
+    display: block;
+  }
+  .section2h2{
+    font-size: 50px;
+  }
+  .bigimg{
+    display: none;
+  }
+}

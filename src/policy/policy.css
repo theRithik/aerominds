@@ -1,0 +1,51 @@
+.policytext{
+    color: grey;
+    font-size: 12px;
+    font-weight: 500;
+    line-height:200%;
+    text-align: justify;
+    word-spacing: 2px;
+}
+
+.policyHeading{
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color:rgb(76, 232, 76);
+}
+.policyHeading2{
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: var(--green);
+}
+
+.policyImg{
+        width:200px
+}
+
+.policyDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.privacyMain{
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 200%;
+    color: var(--green);
+    margin-bottom: 0;
+}
+
+.privacyMnp{
+    font-size: 16px;
+    color: rgb(160, 157, 157);
+    line-height: 200%;
+    word-spacing: 2px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
