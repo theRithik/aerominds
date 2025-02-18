@@ -11,14 +11,16 @@ import Aboutus from './aboutus'
 import Contactus from './contactus'
 import Terms from './policy/terms&cond'
 import PrivcyandPolicy from './policy/privacyPolicy'
+import RoutingSuspense from './Errors/suspense'
+import FallbackRender from './Errors/errorBoundery'
 
 function App() {
 
 
   return (
     <>
-     <ErrorBoundary>
-      <Suspense>
+     <ErrorBoundary fallback={<FallbackRender/>}>
+      <Suspense fallback={<RoutingSuspense/>} >
         <BrowserRouter>
         <Routes>
           <Route element={<Header/>}>
@@ -28,6 +30,7 @@ function App() {
           <Route path='/contactus' element={<Contactus/>}/>
           <Route path='/terms&condition' element={<Terms/>}/>
           <Route path='/privacy-policy' element={<PrivcyandPolicy/>}/>
+         
           </Route>
           <Route path='*' element={<Error404/>}/>
         </Routes>

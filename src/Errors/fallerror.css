@@ -1,0 +1,18 @@
+
+.policyImg{
+    width:100px
+}
+
+.policyDiv{
+display: flex;
+justify-content: center;
+align-items: center;
+padding-top: 20px;
+padding-bottom: 30px;
+}
+.errHeading{
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: rgb(12, 23, 101);
+}
