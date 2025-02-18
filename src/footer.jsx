@@ -1,7 +1,42 @@
 
 import { Link, useNavigate } from 'react-router-dom'
 import './index.css'
+import { useEffect, useState } from 'react';
 const Footer=()=>{
+
+    const [deferredPrompt,setDeferredPrompt]=useState(null)
+
+    useEffect(() => {
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault()
+            console.log(e)
+             setDeferredPrompt(e)
+        });
+      }, []);
+
+    
+      
+const handleClick=async()=>{
+    console.log(deferredPrompt)
+    if(deferredPrompt){
+        
+      deferredPrompt.prompt();
+      const {outcome}= await deferredPrompt.userChoice;
+      if(outcome ==='accepted'){
+        console.log('User accepted')
+      }else{
+        console.log('user Denied')
+      }
+    }
+  if('Notification' in window){
+   const permission = await Notification.requestPermission()
+  if(permission !=='denied'){
+    console.log('Notifaction activated',permission)
+  }else{
+    console.log(permission,'denied')
+  }
+  }
+  }
 
     const history=useNavigate()
     return(
@@ -57,8 +92,11 @@ const Footer=()=>{
     </Link>
 </div>
 </div>
-<div className='col-md-3' style={{textAlign:'center',display:'flex',justifyContent:'center'}}>
-<button className='greenbutton' onClick={()=>history('/contactus')} style={{textTransform:'uppercase',width:150,height:45,background:'black'}}>Contact us</button>
+<div className='col-md-3' style={{textAlign:'center',display:'flex',justifyContent:'center',flexDirection:'column'}}>
+<button className='greenbutton' onClick={()=>history('/contactus')} style={{textTransform:'uppercase',width:150,height:45,background:'black',marginBottom:30}}>Contact us</button>
+{deferredPrompt &&
+            <h6 style={{float:'right',marginRight:'5%',cursor:'pointer',color:'green',fontSize:12}} onClick={handleClick}>Install Aerominds Web App <i class="bi bi-arrow-down-circle-fill"></i></h6>
+            }
 </div>
 </div>
     <hr style={{borderWidth:2,borderColor:'#fff',opacity:1,marginTop:'8%'}}/>
@@ -75,6 +113,7 @@ const Footer=()=>{
 <div style={{position:'absolute',bottom:'1%',left:'40%'}}>
 <p className='smalltext' style={{fontSize:10,color:'black'}}>Designed & Developed by <img src='/images/signature.png' style={{width:40}} alt='signature'/></p>
 </div>
+
         </div>
         </>
     )
