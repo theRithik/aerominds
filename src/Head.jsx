@@ -1,10 +1,31 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import './header.css'
 import { Link, Outlet, useLocation } from "react-router-dom";
 import Footer from "./footer";
 
 const Header=()=>{
     const location = useLocation()
+   
+const navcontainerRef = useRef(null)
+    useEffect(()=>{
+
+      const nav = document.getElementById('homeheader')
+      let prevScroll = window.pageYOffset
+     
+      window.addEventListener('scroll',()=>{
+        const currentScroll = window.pageYOffset
+        if(prevScroll<currentScroll){
+          nav.classList.add('scroll-down')
+        }else{
+          nav.classList.remove('scroll-down')
+        }
+       prevScroll = currentScroll
+      })
+      
+    },[])
+
+
+
     useEffect(()=>{
         
 const nm = location.pathname
@@ -43,7 +64,7 @@ val.classList.add('selected')
 
     return(
         <>
-        <nav class="navbar navbar-expand-lg " id="homeheader">
+        <nav class="navbar navbar-expand-lg " ref={navcontainerRef} id="homeheader">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">
     <img src="/images/aeromindslogo.png" style={{width:150}} alt="logo" />

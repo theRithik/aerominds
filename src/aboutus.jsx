@@ -35,41 +35,42 @@ With a commitment to cutting-edge solutions and operational excellence, we empow
 <div style={{padding:'5%'}}>
 <h1 style={{fontWeight:700,textAlign:'center',marginBottom:'5%'}}>Our Team</h1>
 <div style={{display:'flex',gap:40,textAlign:'center',flexWrap:'wrap',justifyContent:'center'}}>
-<div style={{width:250,height:300,position:'relative',borderRadius:20}}>
+{/* <div style={{width:250,height:300,position:'relative',borderRadius:20}}>
     <img src="/images/team/chairman.png" alt="chairman" style={{width:250,height:300,borderRadius:20}} />
 <div style={{position:'absolute',bottom:'4%',left:'4%',padding:10,backdropFilter:'blur(4px)',borderRadius:12,width:'93%'}}>
 <h6 style={{fontWeight:600,fontSize:20,marginBottom:0,textAlign:'start'}}>Rajagaru</h6>
 <p className="smalltext" style={{fontSize:11,textAlign:'start',marginBottom:0}}>Chairman</p>
 </div>
-</div>
+</div> */}
 <div style={{width:250,height:300,position:'relative',borderRadius:20}}>
-    <img src="/images/team/vam.png" alt="chairman" style={{width:250,height:300,borderRadius:20}} />
+    <img src="/images/team/vam2.png" alt="chairman" style={{width:250,height:300,borderRadius:20}} />
 <div style={{position:'absolute',bottom:'4%',left:'4%',padding:10,backdropFilter:'blur(4px)',borderRadius:12,width:'93%'}}>
-<h6 style={{fontWeight:600,fontSize:20,marginBottom:0,textAlign:'start'}}>Vam</h6>
+<h6 style={{fontWeight:600,fontSize:20,marginBottom:0,textAlign:'start',color:'green'}}>Mr. Vam Majji</h6>
 <p className="smalltext" style={{fontSize:11,textAlign:'start',marginBottom:0,color:'#fff'}}>Chief Executive Officer</p>
 </div>
 </div>
 <div style={{width:250,height:300,position:'relative',borderRadius:20}}>
     <img src="/images/team/cfo.png" alt="chairman" style={{width:250,height:300,borderRadius:20}} />
 <div style={{position:'absolute',bottom:'4%',left:'4%',padding:10,backdropFilter:'blur(4px)',borderRadius:12,width:'93%'}}>
-<h6 style={{fontWeight:600,fontSize:20,marginBottom:0,textAlign:'start'}}>Sowbhagya</h6>
-<p className="smalltext" style={{fontSize:11,textAlign:'start',marginBottom:0,color:'#fff'}}>CFO & HR</p>
-</div>
-</div>
-<div style={{width:250,height:300,position:'relative',borderRadius:20}}>
-    <img src="/images/team/vinay.png" alt="chairman" style={{width:250,height:300,borderRadius:20}} />
-<div style={{position:'absolute',bottom:'4%',left:'4%',padding:10,backdropFilter:'blur(4px)',borderRadius:12,width:'93%'}}>
-<h6 style={{fontWeight:600,fontSize:20,marginBottom:0,textAlign:'start'}}>Vinay</h6>
-<p className="smalltext" style={{fontSize:11,textAlign:'start',marginBottom:0,color:'#fff'}}>COO</p>
+<h6 style={{fontWeight:600,fontSize:20,marginBottom:0,textAlign:'start',color:'green'}}>Ms. Sowbhagya Pallem</h6>
+<p className="smalltext" style={{fontSize:11,textAlign:'start',marginBottom:0,color:'#fff'}}>Managing Director</p>
 </div>
 </div>
 <div style={{width:250,height:300,position:'relative',borderRadius:20}}>
     <img src="/images/team/ajay.png" alt="chairman" style={{width:250,height:300,borderRadius:20}} />
 <div style={{position:'absolute',bottom:'4%',left:'4%',padding:10,backdropFilter:'blur(4px)',borderRadius:12,width:'93%'}}>
-<h6 style={{fontWeight:600,fontSize:20,marginBottom:0,textAlign:'start'}}>Ajay</h6>
-<p className="smalltext" style={{fontSize:11,textAlign:'start',marginBottom:0,color:'#fff'}}>CTO</p>
+<h6 style={{fontWeight:600,fontSize:20,marginBottom:0,textAlign:'start',color:'green'}}>Mr. Ajay Sagar Mamidi</h6>
+<p className="smalltext" style={{fontSize:11,textAlign:'start',marginBottom:0,color:'#fff'}}>Chief Technical Officer</p>
 </div>
 </div>
+<div style={{width:250,height:300,position:'relative',borderRadius:20}}>
+    <img src="/images/team/vinay.png" alt="chairman" style={{width:250,height:300,borderRadius:20}} />
+<div style={{position:'absolute',bottom:'4%',left:'4%',padding:10,backdropFilter:'blur(4px)',borderRadius:12,width:'93%'}}>
+<h6 style={{fontWeight:600,fontSize:20,marginBottom:0,textAlign:'start',color:'green'}}>Mr. Vinay Vinjamuri</h6>
+<p className="smalltext" style={{fontSize:11,textAlign:'start',marginBottom:0,color:'#fff'}}>Chief Operating Officer</p>
+</div>
+</div>
+
 </div>
 </div>
 <div style={{textAlign:'center',marginTop:'5%',marginBottom:40}}>

@@ -1,6 +1,6 @@
 #homeheader{
     background-color: transparent !important;
-    position: absolute;
+    position: fixed;
     width: 100%;
     z-index: 999;
     #navbarNav,.contactbtn{
@@ -24,6 +24,12 @@ ul{
 }
     }
 }
+
+#homeheader.scroll-down{
+    transform: translate3d(0, -200%, 0);
+    transition: .5s ease;
+}
+
 
 
 .offcanvas-body::-webkit-scrollbar{
