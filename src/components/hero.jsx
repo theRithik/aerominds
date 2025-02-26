@@ -89,6 +89,9 @@ Loading
     }
 
 <div id="video-frame" style={{position:'relative',zIndex:10,height:'100dvh',width:'100vw',overflow:'hidden'}}>
+    <div style={{width:'100%',height:'100vh',background:'black',position:'absolute',top:0,left:0,zIndex:-1}}>
+
+    </div>
     <div>
         <div className="clipmask absolutecenter" style={{overflow:'hidden',cursor:'pointer',position:'absolute',zIndex:50,borderRadius:'.5rem'}}>
             <div onClick={handleviedoclick} className="smallvideo">

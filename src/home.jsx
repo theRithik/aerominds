@@ -13,7 +13,7 @@ const Home=()=>{
 
     return(
         <>
-        <div style={{width:'100%',overflowX:'hidden',position:'relative',height:'dvh',background:'black'}}>
+        <div style={{width:'100%',overflowX:'hidden',position:'relative',height:'dvh'}}>
 <Hero/>
 <HeroSection2/>
 <Features/>
