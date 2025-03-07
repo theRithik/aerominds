@@ -1,11 +1,64 @@
 import { StarFilled } from "@ant-design/icons"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
+import { PostData } from "./config/user/apicall"
+import endpoints from "./config/endpoints"
+import { message } from "antd"
+import { Link } from "react-router-dom"
 
 
 const Contactus=()=>{
      useEffect(()=>{
     window.scrollTo(0,0)
         },[])
+
+        const [disabled,setDisabled]=useState(false)
+
+        const sendRequ=async()=>{
+            try{
+          
+            const name = document.getElementById('name').value
+            const email = document.getElementById('email').value
+            const phone = document.getElementById('number').value
+            const msg = document.getElementById('message').value
+            const last = document.getElementById('last').value
+            const check = document.getElementById('flexCheckDefault').checked
+          console.log(name,email,phone,check)
+          if(name!=='' & email !=='' && phone !=='' && last !=='' && msg !==''){
+            if(check){
+                setDisabled(true)
+            document.getElementById('loader').innerHTML='<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>'
+             
+           const dt={
+                    name:name,
+                    email:email,
+                    phone:phone,
+                    message:msg,
+                    last:last,
+                    endpoint:endpoints.query
+                }
+          
+          const data = await PostData(dt)
+          
+          if(data){
+            message.success('Query Sent Successfully')
+          }
+          }
+          else{
+            message.error('please agree to our terms and conditions')
+          }
+          }else{
+            message.info('please fill all the fields')
+          }
+          }catch(er){
+               console.log(er)
+            }finally{
+                setDisabled(false)
+          document.getElementById('loader').innerHTML='<span id="loader"></span>'
+            }
+          }          
+
+
+
     return(
         <>
         <div style={{overflowX:'hidden'}}>
@@ -17,33 +70,33 @@ const Contactus=()=>{
 <div className="row">
 <div className="col-md-6">
 <label className="form-label">First name</label>
-<input className="form-control" type="text" placeholder="Fist name" />
+<input className="form-control" type="text" id="name" placeholder="Fist name" />
 </div>
 <div className="col-md-6">
 <label className="form-label">Last name</label>
-<input className="form-control" type="text" placeholder="Last name" />
+<input className="form-control" type="text" id="last" placeholder="Last name" />
 </div>
 </div>
 <div>
 <label className="form-label">Email</label>
-<input className="form-control" type="email" placeholder="Email" />
+<input className="form-control" type="email" id="email" placeholder="Email" />
 </div>
 <div>
 <label className="form-label">Phone number</label>
-<input className="form-control" type="number" placeholder="Phone number" />
+<input className="form-control" type="number" id="number" placeholder="Phone number" />
 </div>
 <div>
 <label className="form-label">Message</label>
-<textarea className="form-control" type="text" placeholder="Message" style={{minHeight:100}} ></textarea>
+<textarea className="form-control" type="text" id="message" placeholder="Message" style={{minHeight:100}} ></textarea>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
-  <label class="form-check-label smalltext" style={{color:'black'}} for="flexCheckDefault">
-    You agree to our friendly privacy policy
+  <label class="form-check-label smalltext" style={{color:'black',fontSize:10}} for="flexCheckDefault">
+    You agree to our friendly <Link to="/privacy-policy" style={{textDecoration:'underline'}}>privacy policy </Link>
   </label>
 </div>
 <div style={{marginTop:20}}>
-    <button className="greenbutton" style={{width:'100%'}}>Submit</button>
+    <button className="greenbutton" disabled={disabled} onClick={sendRequ} style={{width:'100%'}}> <span id="loader"></span> Submit</button>
 </div>
 </div>
                 </div>
